@@ -1,0 +1,36 @@
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 180px;
+}
+
+.main-footer .link-box {
+  display: flex;
+
+  gap: 20px;
+
+  a {
+    width: 27px;
+    height: 27.045px;
+    flex-shrink: 0;
+  }
+
+  img {
+    width: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.main-footer .company-title {
+  display: flex;
+  justify-content: flex-end;
+
+  color: var(--White, #FFF);
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

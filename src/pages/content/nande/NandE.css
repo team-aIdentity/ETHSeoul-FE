@@ -1,0 +1,13 @@
+.nande {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 140px);
+}
+
+.nande .title {
+  font-size: 50px;
+  font-weight: 900;
+  font-style: italic;
+}

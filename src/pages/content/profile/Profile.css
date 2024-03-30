@@ -1,0 +1,258 @@
+#profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 116px;
+  padding-inline: calc(50vw - 780px);
+}
+
+#profile .divider {
+  margin-block: 50px 30px;
+
+  p {
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: normal;
+  }
+}
+
+#profile #slide {
+  display: flex;
+  width: 100%;
+  height: 500px;
+
+  .inline-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+  }
+
+  .inline-button button {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+
+    background-color: transparent;
+    border: 0;
+
+    i {
+      font-size: 50px;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    gap: 20px;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
+
+#profile .profile {
+  display: flex;
+  width: 100%;
+  gap: 100px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  img {
+    width: 650px;
+    height: 650px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+
+  .title-box {
+    width: 100%;
+    padding-top: 29px;
+
+    .title {
+      color: #000;
+      font-family: Inter;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+
+      margin-bottom: 10px;
+    }
+
+    .follower-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .heart-button {
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+
+        background-color: transparent;
+        border: 0;
+
+        i {
+          font-size: 25px;
+          text-align: center;
+
+          color: red;
+        }
+      }
+
+      .heart {
+        color: #000;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        margin-left: 5px;
+        padding-right: 10px;
+
+        border-right: 1px solid black;
+      }
+
+      .follower {
+        color: var(--Black, #000);
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        margin-left: 10px;
+      }
+
+      .link-box {
+        margin-left: 19px;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        a {
+          width: 20px;
+          height: 20px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .description {
+      color: var(--Gray, #626262);
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      padding-bottom: 71px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #626262;
+    }
+
+    .information-box {
+      display: flex;
+      flex-direction: column;
+      padding-left: 35px;
+      width: 100%;
+      gap: 20px;
+
+      .information-title {
+        color: var(--Black, #000);
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: normal;
+        text-transform: uppercase;
+
+        list-style: disc;
+      }
+
+      .information-sub-title {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        .title {
+          color: var(--Gray, #626262);
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+
+          margin: 0;
+        }
+
+        .value {
+          color: var(--Black, #000);
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+
+
+#profile #fandom-story {
+  width: 100%;
+
+  .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px;
+
+    row-gap: 21px;
+  }
+
+  .container button {
+    width: 480px;
+    height: 500px;
+
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
