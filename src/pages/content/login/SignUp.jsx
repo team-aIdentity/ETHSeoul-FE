@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import axios from "axios";
 
+import profileImgFile from "../../../assets/mypage/profile.png";
+
 import "./SignUp.css";
 import MainContext from "../../../components/context/MainContext";
 
@@ -12,14 +14,18 @@ export default function SignUp() {
   const [userName, setName] = useState("");
   const [userPW, setPW] = useState("");
   const [userCPW, setCPW] = useState("");
+  const formData = new FormData();
 
   const setUserName = useContext(MainContext).setUserName;
   const setIsLogin = useContext(MainContext).setIsLogin;
   const setPostApi = async () => {
     try {
+      formData.append("user_id", userName);
+      formData.append("user_pw", userPW);
+      formData.append("profile_img", profileImgFile);
+
       await axios.post("URL", {
-        id: userName,
-        password: userPW,
+        body: formData,
       });
     } catch (e) {
       console.error(e);

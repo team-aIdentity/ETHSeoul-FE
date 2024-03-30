@@ -10,6 +10,8 @@ import MyPageHandler from "../pages/content/mypage/MyPageHandler";
 import ShopLayout from "../layout/ShopLayout";
 import Profile from "../pages/content/profile/Profile";
 import DetailPage from "../pages/content/buyDetail/DetailPage";
+import Cart from "../pages/content/cart/Cart";
+import PayMentPage from "../pages/content/paymentpage/PayMentPage";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
       {
         path: "detail/:profileId",
         element: <Profile />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
+      {
+        path: "payment",
+        element: <PayMentPage />,
       },
     ],
   },

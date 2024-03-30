@@ -1,0 +1,419 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#payment {
+  width: 100%;
+  height: 100%;
+
+  padding-top: 120px;
+  padding-inline: calc(50vw - 780px);
+
+  margin-bottom: 100px;
+}
+
+#payment .buy-mint {
+  width: 100%;
+
+  .title {
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: normal;
+
+    margin-bottom: 30px;
+  }
+
+  .sub-title {
+    color: var(--Gray, #626262);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    margin-bottom: 75px;
+  }
+}
+
+#payment .main-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+#payment .main-container .user-input-container {
+  display: flex;
+  flex-direction: column;
+  width: 770px;
+
+  .contents {
+    margin-bottom: 50px;
+
+    li {
+      display: flex;
+      padding-block: 18px;
+      border-bottom: 2px solid #d9d9d9;
+    }
+
+    li:first-child {
+      border-top: 4px solid #626262;
+    }
+
+    .item {
+      color: var(--Black, #000);
+      font-family: Inter;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      width: 379px;
+    }
+
+    .info {
+      color: var(--Gray, #626262);
+      font-family: Inter;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  p.required-title {
+    color: var(--Gray, #626262);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    margin-bottom: 25px;
+
+    span {
+      color: var(--Black, #000);
+      font-family: Inter;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  .input-user-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin-bottom: 75px;
+
+    input {
+      height: 100px;
+      padding-left: 25px;
+
+      border-radius: 20px;
+      border: 3px solid var(--Gray, #626262);
+
+      color: var(--Gray, #626262);
+      font-family: Inter;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .user-phone {
+      display: flex;
+      gap: 20px;
+
+      .phone-code {
+        width: 200px;
+      }
+
+      .phone-number {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .fandom {
+    margin-bottom: 100px;
+
+    .title {
+      color: #000;
+      font-family: Inter;
+      font-size: 48px;
+      font-style: italic;
+      font-weight: 900;
+      line-height: normal;
+
+      margin-bottom: 30px;
+    }
+
+    select {
+      width: 100%;
+      height: 100px;
+
+      padding-inline: 20px;
+      border-radius: 20px;
+
+      color: var(--Gray, #626262);
+      font-family: Inter;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      appearance: none;
+      -webkit-appearance: none;
+    }
+  }
+
+  .payment {
+
+    .title-box {
+      .title {
+        color: var(--Black, #000);
+        font-family: Inter;
+        font-size: 48px;
+        font-style: italic;
+        font-weight: 900;
+        line-height: normal;
+
+        padding-bottom: 30px;
+        border-bottom: 4px solid #626262;
+      }
+    }
+
+    ul {
+      width: 100%;
+      margin-bottom: 40px;
+
+      li {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-block: 20px;
+
+        border-bottom: 4px solid #D9D9D9;
+
+        .title {
+          color: #000;
+          font-family: Inter;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .checkbox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: 40px;
+          height: 40px;
+          flex-shrink: 0;
+
+          border-radius: 50%;
+          border: 2px solid black;
+
+          overflow: hidden;
+
+          input {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+
+    .required-box {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      gap: 15px;
+
+      margin-bottom: 60px;
+
+      .checkbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+
+        border-radius: 50%;
+        border: 2px solid black;
+
+        overflow: hidden;
+
+        input {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    button.submit {
+      width: 100%;
+      height: 120px;
+      border: 0;
+      border-radius: 30px;
+      background: var(--Blue, #2BB3FF);
+      color: var(--White, #FFF);
+      font-family: Inter;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+#payment .main-container .card-container {
+  width: 770px;
+  height: 560px;
+  flex-shrink: 0;
+
+  background-color: white;
+
+  padding-inline: 35px;
+  padding-top: 42px;
+
+  z-index: 10;
+
+  border-radius: 20px;
+  border: 5px solid var(--soft-gray, #D9D9D9);
+
+  transition: all 0.2s ease;
+
+  &.down {
+    position: fixed;
+    top: 320px;
+    right: calc(50vw - 780px);
+  }
+}
+
+#payment .main-container .card-container .concert-info {
+  display: flex;
+  width: 100%;
+
+  padding-bottom: 50px;
+  border-bottom: 1px solid #626262;
+  margin-bottom: 50px;
+
+  .card-title-img {
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+
+    border-radius: 20px;
+
+    margin-right: 41px;
+  }
+
+  .user-box {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-box .title-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin-bottom: 112px;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+
+        border-radius: 50%;
+      }
+
+      p {
+        color: #000;
+        font-family: Inter;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+
+  .item-counter {
+    color: #000;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: end;
+  }
+
+  .concert-title {
+    color: var(--Black, #000);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+#payment .main-container .card-container .price-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 50px;
+
+  .price-title {
+    color: var(--Gray, #626262);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .total-price {
+    color: var(--Black, #000);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

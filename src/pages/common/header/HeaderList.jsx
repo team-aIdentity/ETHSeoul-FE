@@ -38,7 +38,7 @@ export const User = [
   },
   {
     title: "Cart",
-    to: "/user/cart",
+    to: "/cart",
     icon: "bx bxs-cart-alt",
   },
   {
