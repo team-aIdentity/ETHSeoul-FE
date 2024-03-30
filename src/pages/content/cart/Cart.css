@@ -1,0 +1,265 @@
+#cart {
+  width: 100%;
+  max-height: calc(100vh - 140px);
+  min-height: 1100px;
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 120px;
+  padding-inline: calc(50vw - 780px);
+
+  .title {
+    color: #000;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: normal;
+
+    margin-bottom: 30px;
+  }
+
+  .sub-title {
+    color: var(--Gray, #626262);
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    margin-bottom: 50px;
+  }
+
+  .buy-button {
+    align-self: center;
+    width: 768px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 0;
+    background: var(--Blue, #2BB3FF);
+
+    margin-bottom: 75px;
+
+    color: var(--White, #FFF);
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+#cart .cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  width: 100%;
+  height: 100vh;
+
+  margin-bottom: 75px;
+
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+#cart .cart-list .empty {
+  width: 100%;
+
+  color: black;
+  font-family: Inter;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  line-height: normal;
+
+  justify-self: center;
+  margin-top: 100px;
+}
+
+#item {
+  display: flex;
+  width: 100%;
+  height: 560px;
+
+  border-radius: 20px;
+  border: 5px solid var(--soft-gray, #D9D9D9);
+
+  padding-inline: 34px;
+
+  .title-box {
+    width: 708px;
+    height: 100%;
+    padding-block: 42px 0px;
+
+    .img-box {
+      display: flex;
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+
+      border-bottom: 1px solid #626262;
+
+      img {
+        width: 253px;
+        height: 250px;
+        flex-shrink: 0;
+
+        border-radius: 20px;
+        margin-right: 41px;
+      }
+
+      .box {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        .profile-box {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+        }
+
+        img {
+          width: 51px;
+          height: 50px;
+          flex-shrink: 0;
+
+          border-radius: 50%;
+          margin-right: 10px;
+          padding: 0;
+        }
+
+        .title {
+          color: #000;
+          font-family: Inter;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-align: start;
+          margin-bottom: 0;
+        }
+
+        .description {
+          color: var(--Black, #000);
+          font-family: Inter;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+
+
+          margin-bottom: 129px;
+        }
+
+        .amount {
+          width: 100%;
+          color: #000;
+          font-family: Inter;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          text-align: end;
+        }
+      }
+    }
+
+    .price-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 708px;
+
+      margin-bottom: 50px;
+
+      .price-title {
+        color: var(--Gray, #626262);
+        font-family: Inter;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .total-price {
+        color: black;
+        font-family: Inter;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+#item .add-minus-box {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-block: 30px;
+
+  .reset-box {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    .reset {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+
+      background-color: transparent;
+      border: 0;
+
+      font-size: 40px;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+
+  .button-box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+    button {
+      width: 50px;
+      height: 50px;
+
+      border: 1px solid black;
+      background-color: transparent;
+      border-radius: 5px;
+
+      font-size: 25px;
+      font-weight: 900;
+
+      color: black;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(1.6);
+      }
+    }
+  }
+}
