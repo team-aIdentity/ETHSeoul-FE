@@ -3,14 +3,17 @@ import React, { useState } from "react";
 const CartContext = React.createContext({
   amount: 0,
   totalPrice: 0,
+  isBuy: false,
   plusAmount: () => {},
   minusAmount: () => {},
   resetAmount: () => {},
+  buyHandler: () => {},
 });
 
 export const CartContextProvider = (props) => {
   const [amount, setAmount] = useState(0);
   const [totalPrice, setTotal] = useState(0);
+  const [isBuy, setBuy] = useState(false);
 
   const plusAmount = () => {
     let newAmount = amount + 1;
@@ -32,14 +35,19 @@ export const CartContextProvider = (props) => {
     setAmount(0);
     setTotalPriceHandler(0);
   };
+  const buyHandler = () => {
+    setBuy(true);
+  }
   return (
     <CartContext.Provider
       value={{
         amount: amount,
         totalPrice: totalPrice,
+        isBuy: isBuy,
         plusAmount: plusAmount,
         minusAmount: minusAmount,
         resetAmount: resetAmount,
+        buyHandler: buyHandler,
       }}
     >
       {props.children}

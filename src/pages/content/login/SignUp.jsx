@@ -1,7 +1,7 @@
 import listLogo from "../../../assets/login/list-logo.png";
 import navBkLogo from "../../../assets/login/navigation-back-logo.png";
 import { useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 
 import profileImgFile from "../../../assets/mypage/profile.png";
@@ -18,21 +18,21 @@ export default function SignUp() {
 
   const setUserName = useContext(MainContext).setUserName;
   const setIsLogin = useContext(MainContext).setIsLogin;
+  const setWalletAddress = useContext(MainContext).setWalletAddress;
+
   const setPostApi = async () => {
     try {
-      formData.append("user_id", userName);
-      formData.append("user_pw", userPW);
+      // formData.append("user_id", userName);
+      // formData.append("user_pw", userPW);
       formData.append("profile_img", profileImgFile);
+      console.log('signup?', formData)
 
-      await axios.post("URL", {
-        body: formData,
-      });
+      const result = await axios.post("http://localhost:3000/user/signup", {userName, userPW, formData});
+      setWalletAddress(result.data);
     } catch (e) {
       console.error(e);
     }
   };
-
-  // URL 수정 필요
 
   const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ export default function SignUp() {
     }
   };
 
-  const setUserInputSubmitHandler = () => {
+  const setUserInputSubmitHandler = async () => {
     if (userName === "" || userPW === "") {
       alert("공백을 입력해주세요.");
     } else if (userPW !== userCPW) {
@@ -57,7 +57,7 @@ export default function SignUp() {
     } else {
       setIsLogin(true);
       setUserName(userName);
-      setPostApi();
+      await setPostApi();
       navigate("/");
     }
   };

@@ -4,6 +4,7 @@ import img2 from "../../../assets/fandom/yoasobi-img.png";
 import "./PayMentPage.css";
 import MainContext from "../../../components/context/MainContext";
 import CartContext from "../../../components/context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 function CardType4({ title_img, profile_img, amount }) {
   return (
@@ -38,8 +39,10 @@ function CardType4({ title_img, profile_img, amount }) {
 }
 
 export default function PayMentPage() {
+  const navigate = useNavigate();
   const mainCtx = useContext(MainContext);
   const cartCtx = useContext(CartContext);
+  const buyHandler = useContext(CartContext).buyHandler;
   const [scrollCard, setScrollCard] = useState("");
   const paymentItems = [
     "User",
@@ -54,7 +57,7 @@ export default function PayMentPage() {
 
   const paymentList = [
     mainCtx.userName,
-    "0x00....0000",
+    `${mainCtx.walletAddress.slice(0,5)}...`,
     "Yoasobi Asia Tour in Seoul",
     "Yoasobi",
     "2024-03-29 09:00",
@@ -79,6 +82,12 @@ export default function PayMentPage() {
       setScrollCard("");
     }
   };
+
+  const onClickSubmit = (e) => {
+    e.preventDefault();
+    buyHandler();
+    navigate("/mypage");
+  }
 
   return (
     <div id="payment">
@@ -145,7 +154,7 @@ export default function PayMentPage() {
                 of personal information
               </p>
             </div>
-            <button className="submit">OK</button>
+            <button className="submit"onClick={onClickSubmit} >OK</button>
           </div>
         </div>
         <div className={`card-container ${scrollCard}`}>
